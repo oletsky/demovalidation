@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo validation</title>
+</head>
+<body>
+<form action="/reply" method="get"
+      id="fid" onsubmit="return f_submit();">
+    Введіть число менше за 10
+    <br/>
+    <input type="text" name="data"/>
+    <br/>
+    <br/>
+    <input type="submit" value="Do it"/>
+</form>
+<script>
+    function f_submit() {
+        let
+            v=document.forms["fid"].data.value;
+        if (v>=10) {
+            window.alert("Wrong input="+v+"!");
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+</script>
+
+</body>
+</html>

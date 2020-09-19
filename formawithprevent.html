@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation with preventDefault</title>
+</head>
+<body>
+<form action="/reply" method="get"
+      id="fid" onsubmit="fp_submit(event);">
+    Введіть число менше за 10
+    <br/>
+    <input type="text" name="data"/>
+    <br/>
+    <br/>
+    <input type="submit" value="Do it"/>
+</form>
+<script>
+    function fp_submit(evt) {
+        let
+            v = document.forms["fid"].data.value;
+        if (v >= 10) {
+            window.alert("Wrong input=" + v + "!");
+            evt.preventDefault();
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
